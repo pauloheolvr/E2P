@@ -291,7 +291,6 @@ public class FrenteCaixa extends javax.swing.JInternalFrame {
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Total da Venda", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
 
         jButton4.setBackground(new java.awt.Color(51, 255, 51));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/verificado.png"))); // NOI18N
         jButton4.setText("Pagamento");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
