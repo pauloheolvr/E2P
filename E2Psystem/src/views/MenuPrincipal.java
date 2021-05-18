@@ -39,10 +39,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuItemCliente = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItemProdutos = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("E2P System");
         setExtendedState(6);
+        setResizable(false);
 
         jDesktopPane1.setLayer(decoratedDesktopPane11, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -90,6 +93,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu3.setText("Opções");
+
+        jMenuItem1.setText("Cadastrar Usuário");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu3);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -126,7 +141,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jMenuItemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemClienteActionPerformed
         // TODO add your handling code here:
-        Clientes tela = new Clientes();
+        ConsultaClientes tela = new ConsultaClientes();
         jDesktopPane1.add(tela);
         centralizarInternalFrame(this, tela);
         tela.setVisible(true);
@@ -139,6 +154,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         centralizarInternalFrame(this, tela);
         tela.setVisible(true);
     }//GEN-LAST:event_jMenuItemProdutosActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        Funcionario tela = new Funcionario();
+        jDesktopPane1.add(tela);
+        centralizarInternalFrame(this, tela);
+        tela.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,7 +203,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemCliente;
     private javax.swing.JMenuItem jMenuItemFrenteCaixa;
     private javax.swing.JMenuItem jMenuItemProdutos;
