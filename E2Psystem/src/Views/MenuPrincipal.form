@@ -113,7 +113,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="models.DecoratedDesktopPane1" name="decoratedDesktopPane11">
+        <Container class="Models.DecoratedDesktopPane1" name="decoratedDesktopPane11">
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
             <Property name="useNullLayout" type="boolean" value="true"/>

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package views;
+package Views;
 
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
@@ -31,7 +31,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
-        decoratedDesktopPane11 = new models.DecoratedDesktopPane1();
+        decoratedDesktopPane11 = new Models.DecoratedDesktopPane1();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItemFrenteCaixa = new javax.swing.JMenuItem();
@@ -199,7 +199,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private models.DecoratedDesktopPane1 decoratedDesktopPane11;
+    private Models.DecoratedDesktopPane1 decoratedDesktopPane11;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
