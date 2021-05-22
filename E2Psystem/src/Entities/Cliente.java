@@ -16,7 +16,9 @@ public class Cliente
     private UUID id;
     private String nome;
     private String cpf;
-
+    private String telefone;
+    private Date dataNascimento;
+    
     public UUID getId() {
         return id;
     }
@@ -36,6 +38,4 @@ public class Cliente
     public Date getDataNascimento() {
         return dataNascimento;
     }
-    private String telefone;
-    private Date dataNascimento;
 }
