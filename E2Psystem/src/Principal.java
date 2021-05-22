@@ -1,11 +1,9 @@
-
-import Views.Load;
-
+import Views.Autenticacao;
 
 public class Principal 
 {
     public static void main(String[] args) 
     {
-        new Load().setVisible(true);
+        new Autenticacao().setVisible(true);
     }
 }
