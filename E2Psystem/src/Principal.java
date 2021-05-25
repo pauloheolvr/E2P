@@ -1,4 +1,3 @@
-import Views.Autenticacao;
 import Views.Load;
 
 public class Principal 

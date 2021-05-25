@@ -44,8 +44,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("E2P System");
-        setExtendedState(6);
-        setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jDesktopPane1.setLayer(decoratedDesktopPane11, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -162,6 +165,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         centralizarInternalFrame(this, tela);
         tela.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        setExtendedState(MAXIMIZED_BOTH);
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
