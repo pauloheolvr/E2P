@@ -146,6 +146,7 @@ public class Autenticacao extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane,"Login ou senha inválidos", "Atenção", JOptionPane.ERROR_MESSAGE);
         }else{
             new MenuPrincipal().setVisible(true);
+            dispose();
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
