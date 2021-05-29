@@ -1,51 +1,12 @@
 
 package Views;
 
-import Entities.Funcionario;
-import Conexão.SQL;
 import javax.swing.JOptionPane;
 
 public class Autenticacao extends javax.swing.JFrame {
-    SQL conectar = new SQL(); 
-    Funcionario novoFuncionario = new Funcionario();
     public Autenticacao() {
         initComponents();
     }
-        public void Logar(Funcionario novoFuncionario){
-           this.conectar.conectaBanco();
-           String txtlogin = this.txtlogin.getText();
-           String txtsenha = this.txtsenha.getText();
-           
-           try {
-              this.conectar.executarSQL(
-                   "SELECT "
-                    + " Cpf,"                    
-                    + " senha"
-                           
-                 + " FROM"
-                     + "funcionarios"
-                 + " WHERE"
-                     + " Cpf = '" + txtlogin + "'"
-                     + "and"
-                     + " Senha = '" + txtsenha + "'"
-                + ";");
-              while(this.conectar.getResultSet().next()){
-                novoFuncionario.setCpf (this.conectar.getResultSet().getString(1));
-                novoFuncionario.setSenha(this.conectar.getResultSet().getString(2));
- 
-              }
-          } catch (Exception e) {
-          }
-             if(novoFuncionario.getCpf() == null ? txtlogin != null : !novoFuncionario.getCpf().equals(txtlogin) ){
-                 JOptionPane.showMessageDialog(rootPane, "Usuário ou senha inválidos");
-                
-                
-              }else{
-                 new MenuPrincipal().setVisible(true);        
-                dispose();
-           
-                }
-        }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -178,7 +139,14 @@ public class Autenticacao extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Logar(novoFuncionario);
+        String login = txtlogin.getText().toString();
+        String senha = new String(txtsenha.getPassword());
+        
+        if(!login.equals("123.456.789-00") && !senha.equals("123")){
+            JOptionPane.showMessageDialog(rootPane,"Login ou senha inválidos", "Atenção", JOptionPane.ERROR_MESSAGE);
+        }else{
+            new MenuPrincipal().setVisible(true);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void txtloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtloginActionPerformed
