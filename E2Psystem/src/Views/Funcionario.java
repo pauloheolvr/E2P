@@ -88,6 +88,7 @@ public class Funcionario extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/loupe.png"))); // NOI18N
         jButton2.setText("Pesquisar");
 
@@ -219,13 +220,10 @@ public class Funcionario extends javax.swing.JInternalFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {"1", "José", "234.567.102-20", "Gerente"}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Id", "Nome", "CPF", "Cargo"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
