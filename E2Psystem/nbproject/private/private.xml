@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/E:/FACENS/3o_Semestre/ProjetoE2P/E2P/E2Psystem/src/Views/Produtos.java</file>
             <file>file:/E:/FACENS/3o_Semestre/ProjetoE2P/E2P/E2Psystem/src/Entities/Produto.java</file>
             <file>file:/E:/FACENS/3o_Semestre/ProjetoE2P/E2P/E2Psystem/src/Conexão/SQL.java</file>
@@ -11,6 +12,17 @@
             <file>file:/E:/FACENS/3o_Semestre/ProjetoE2P/E2P/E2Psystem/src/Views/ConsultaClientes.java</file>
             <file>file:/E:/FACENS/3o_Semestre/ProjetoE2P/E2P/E2Psystem/src/Entities/Venda.java</file>
             <file>file:/E:/FACENS/3o_Semestre/ProjetoE2P/E2P/E2Psystem/src/Views/Funcionario.java</file>
+=======
+            <file>file:/C:/Users/Paulo/Desktop/Projeto/E2P/E2Psystem/src/Views/FrenteCaixa.java</file>
+            <file>file:/C:/Users/Paulo/Desktop/Projeto/E2P/E2Psystem/src/Views/AlterarProduto.java</file>
+            <file>file:/C:/Users/Paulo/Desktop/Projeto/E2P/E2Psystem/src/Views/Load.java</file>
+            <file>file:/C:/Users/Paulo/Desktop/Projeto/E2P/E2Psystem/src/Views/Funcionario.java</file>
+            <file>file:/C:/Users/Paulo/Desktop/Projeto/E2P/E2Psystem/src/Views/Produtos.java</file>
+            <file>file:/C:/Users/Paulo/Desktop/Projeto/E2P/E2Psystem/src/Views/ConsultaClientes.java</file>
+            <file>file:/C:/Users/Paulo/Desktop/Projeto/E2P/E2Psystem/src/Views/Autenticacao.java</file>
+            <file>file:/C:/Users/Paulo/Desktop/Projeto/E2P/E2Psystem/src/Views/Pagamento.java</file>
+            <file>file:/C:/Users/Paulo/Desktop/Projeto/E2P/E2Psystem/src/Views/MenuPrincipal.java</file>
+>>>>>>> 54957a9526915730e119c2d2b849fde5ab901c71
         </group>
     </open-files>
 </project-private>
