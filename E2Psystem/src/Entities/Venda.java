@@ -1,7 +1,7 @@
 
 import Entities.Cliente;
 import Entities.Produto;
-import Views.Funcionario;
+import Views.CadastroFuncionario;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
@@ -12,7 +12,7 @@ import java.util.UUID;
 
 public class Venda 
 {    
-    public Venda(Cliente cliente, Funcionario funcionario, List<Produto> produtos) 
+    public Venda(Cliente cliente, CadastroFuncionario funcionario, List<Produto> produtos) 
     {
         this.dataVenda = getDateTime();
         this.cliente = cliente;
@@ -21,7 +21,7 @@ public class Venda
     }
     private UUID id;
     private Cliente cliente;
-    private Funcionario funcionario;
+    private CadastroFuncionario funcionario;
     private List<Produto> Produtos;
     private String dataVenda ;
     
