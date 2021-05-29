@@ -1,8 +1,4 @@
 package Entities;
-<<<<<<< HEAD
-=======
-
->>>>>>> 54957a9526915730e119c2d2b849fde5ab901c71
 import java.util.UUID;
 
 public class Funcionario 
@@ -16,9 +12,6 @@ public class Funcionario
     public String cargo;
     public String cpf;
     public String senha;
-<<<<<<< HEAD
-}
-=======
 
     public void setId(UUID id) {
         this.id = id;
@@ -34,14 +27,6 @@ public class Funcionario
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public void setSenha(String senha) {
@@ -64,16 +49,7 @@ public class Funcionario
         return cpf;
     }
 
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
     public String getSenha() {
         return senha;
     }
 }
->>>>>>> 54957a9526915730e119c2d2b849fde5ab901c71
