@@ -17,11 +17,20 @@ public class Produto {
     private String tamanho;
     private double valor;
     private int quantidadeEstoque;
-    
-    private void Update(String nome, String tamanho, double valor, int quantidadeEstoque){
+
+    public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public void setTamanho(String tamanho) {
         this.tamanho = tamanho;
+    }
+
+    public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    public void setQuantidadeEstoque(int quantidadeEstoque) {
         this.quantidadeEstoque = quantidadeEstoque;
     }
     

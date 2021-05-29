@@ -1,42 +1,50 @@
 package Entities;
 
-import Enum.Cargo;
 import java.util.UUID;
 
 public class Funcionario 
 {
-
-    public Funcionario(String nome, Cargo cargo, String cpf, String telefone, String email, String senha) {
+    
+    public Funcionario() {
         this.id = UUID.randomUUID();
+    }
+    
+    public UUID id;
+    public String nome;
+    public String cargo;
+    public String cpf;
+    public String telefone;
+    public String email;
+    public String senha;
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public void setCargo(String cargo) {
         this.cargo = cargo;
+    }
+
+    public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setSenha(String senha) {
         this.senha = senha;
     }
-    
-    private UUID id;
-    private String nome;
-    private Cargo cargo;
-    private String cpf;
-    private String telefone;
-    private String email;
-    private String senha;
 
-    public void Update(Cargo cargo, String telefone, String email)
-    {
-        this.cargo = cargo;
-        this.telefone = telefone;
-        this.email = email;
-    }
-
-    @Override
-    public String toString() {
-        return "ID: "+id+"\nNome: "+nome+"\nCargo: "+cargo+"\nCpf: "+cpf+"\nTelefone: "+telefone+"\nEmail: "+email+"\nSenha: "+senha;
-    }
-    
-    
     public UUID getId() {
         return id;
     }
@@ -45,7 +53,7 @@ public class Funcionario
         return nome;
     }
 
-    public Cargo getCargo() {
+    public String getCargo() {
         return cargo;
     }
 
