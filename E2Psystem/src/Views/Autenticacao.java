@@ -1,10 +1,25 @@
-
 package Views;
-
+import DAO.FuncionarioDAO;
+import DAO.ManagerFactory;
+import Entities.Funcionarios;
+import javax.persistence.EntityManager;
 import javax.swing.JOptionPane;
 
 public class Autenticacao extends javax.swing.JFrame {
+    
+    private boolean autenticado = false;
+    private String usuarioAutenticado = "";
+    private FuncionarioDAO funcionarioDAO;
+    
+    public boolean getAutenticado() {
+        return autenticado;
+    }
+
+    public String getUsuarioAutenticado() {
+        return usuarioAutenticado;
+    }
     public Autenticacao() {
+        funcionarioDAO = new FuncionarioDAO();
         initComponents();
     }
     @SuppressWarnings("unchecked")
@@ -139,14 +154,16 @@ public class Autenticacao extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String login = txtlogin.getText().toString();
+        String login = txtlogin.getText();
         String senha = new String(txtsenha.getPassword());
-        
-        if(!login.equals("123.456.789-00") && !senha.equals("123")){
-            JOptionPane.showMessageDialog(rootPane,"Login ou senha inválidos", "Atenção", JOptionPane.ERROR_MESSAGE);
-        }else{
+        if(!"123.456.789-00".equals(login) && "123".equals(senha)){
+            autenticado = true;
+            usuarioAutenticado = login;
             new MenuPrincipal().setVisible(true);
             dispose();
+             
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuário ou senha inválido!", "Atenção", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 

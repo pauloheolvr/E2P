@@ -147,7 +147,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jMenuItemProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProdutosActionPerformed
         // TODO add your handling code here:
-        Produtos tela = new Produtos();
+        CadastroProdutos tela = new CadastroProdutos();
         jDesktopPane1.add(tela);
         centralizarInternalFrame(this, tela);
         tela.setVisible(true);

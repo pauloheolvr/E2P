@@ -1,4 +1,3 @@
-import Conexão.SQL;
 import Views.Load;
 
 public class Principal 
