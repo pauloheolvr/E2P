@@ -96,7 +96,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenu4.setText("Relatórios");
 
-        jMenuItem3.setText("Vendas");
+        jMenuItem3.setText("Histórico de Venda");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem3);
 
         jMenu3.add(jMenu4);
@@ -139,7 +144,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jMenuItemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemClienteActionPerformed
         // TODO add your handling code here:
-        ConsultaClientes tela = new ConsultaClientes();
+        CrudClientes tela = new CrudClientes();
         jDesktopPane1.add(tela);
         centralizarInternalFrame(this, tela);
         tela.setVisible(true);
@@ -147,7 +152,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jMenuItemProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProdutosActionPerformed
         // TODO add your handling code here:
-        CadastroProdutos tela = new CadastroProdutos();
+        CrudProdutos tela = new CrudProdutos();
         jDesktopPane1.add(tela);
         centralizarInternalFrame(this, tela);
         tela.setVisible(true);
@@ -158,11 +163,19 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        CadastroFuncionario cadastroFuncionario = new CadastroFuncionario();
+        CrudFuncionario cadastroFuncionario = new CrudFuncionario();
         jDesktopPane1.add(cadastroFuncionario);
         centralizarInternalFrame(this, cadastroFuncionario);
         cadastroFuncionario.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        HistoricoVenda tela = new HistoricoVenda();
+        jDesktopPane1.add(tela);
+        centralizarInternalFrame(this, tela);
+        tela.setVisible(true);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments

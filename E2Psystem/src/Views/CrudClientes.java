@@ -9,12 +9,12 @@ package Views;
  *
  * @author Paulo
  */
-public class ConsultaClientes extends javax.swing.JInternalFrame {
+public class CrudClientes extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form ConsultaClientes
      */
-    public ConsultaClientes() {
+    public CrudClientes() {
         initComponents();
     }
 

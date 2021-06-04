@@ -1,5 +1,5 @@
 
-import Views.CadastroFuncionario;
+import Views.CrudFuncionario;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
@@ -10,13 +10,13 @@ import java.util.UUID;
 
 public class Venda 
 {    
-    public Venda(CadastroFuncionario funcionario) 
+    public Venda(CrudFuncionario funcionario) 
     {
         this.dataVenda = getDateTime();
         this.funcionario = funcionario;
     }
     private UUID id;
-    private CadastroFuncionario funcionario;
+    private CrudFuncionario funcionario;
     private String dataVenda ;
     
     private String getDateTime() 

@@ -18,18 +18,18 @@ import javax.swing.table.TableModel;
  *
  * @author Paulo
  */
-public class CadastroFuncionario extends javax.swing.JInternalFrame {
+public class CrudFuncionario extends javax.swing.JInternalFrame {
 
     private int idSelecionado;
     private Entities.Funcionarios objetoFuncionario;
-    private static CadastroFuncionario myInstance;
+    private static CrudFuncionario myInstance;
     
-    public CadastroFuncionario getInstance(){
+    public CrudFuncionario getInstance(){
         if(myInstance == null)
-            myInstance = new CadastroFuncionario();
+            myInstance = new CrudFuncionario();
         return myInstance;
     }
-    public CadastroFuncionario() {
+    public CrudFuncionario() {
         this.objetoFuncionario = objetoFuncionario;
         initComponents();
     }
