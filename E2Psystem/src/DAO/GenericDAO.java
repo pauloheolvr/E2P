@@ -63,19 +63,41 @@ public class GenericDAO<T> {
             close();
         }
     }
+    
+    public void excluirTodos(List<T> entity) {
+        EntityTransaction tx = getEntityManager().getTransaction();
+        try {
+            tx.begin();
+            for (T t : entity) {
+            getEntityManager().remove(t);
+            }
+            tx.commit();
+        } catch (Throwable t) {
+            t.printStackTrace();
+            tx.rollback();
+        } finally {
+            close();
+        }
+    }
 
     public List<T> selecionarTodos() throws Exception {
         CriteriaQuery<T> criteria = getEntityManager().getCriteriaBuilder().createQuery(persistentClass);
         criteria.select(criteria.from(persistentClass));
         return getEntityManager().createQuery(criteria).getResultList();
     }
+    
+    public T selecionarPrimeiro() throws Exception {
+        CriteriaQuery<T> criteria = getEntityManager().getCriteriaBuilder().createQuery(persistentClass);
+        criteria.select(criteria.from(persistentClass));
+        return getEntityManager().createQuery(criteria).getSingleResult();
+    }
 
     public T selecionarPorCodigo(int codigo) {
         return (T) getEntityManager().getReference(persistentClass, codigo);
     }
     
-    public T selecionarPorCodigo(String codigo) {
-        return (T) getEntityManager().getReference(persistentClass, codigo);
+    public T selecionarPorCpf(String cpf) {
+        return (T) getEntityManager().getReference(persistentClass, cpf);
     }
 
     private void close() {

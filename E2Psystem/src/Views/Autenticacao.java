@@ -154,14 +154,11 @@ public class Autenticacao extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String login = txtlogin.getText();
+        String login = txtlogin.getText().toString();
         String senha = new String(txtsenha.getPassword());
-        if(!"123.456.789-00".equals(login) && "123".equals(senha)){
-            autenticado = true;
-            usuarioAutenticado = login;
+        if(!"111.111.111-11".equals(login) && "123".equals(senha)){
             new MenuPrincipal().setVisible(true);
             dispose();
-             
         } else {
             JOptionPane.showMessageDialog(this, "Usuário ou senha inválido!", "Atenção", JOptionPane.ERROR_MESSAGE);
         }

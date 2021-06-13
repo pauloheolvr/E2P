@@ -9,12 +9,9 @@ public class FuncionarioDAO extends GenericDAO<Funcionarios>{
         Funcionarios funcionario = super.selecionarPorCodigo(id);
         super.excluir(funcionario);
     }
-    
-    public Funcionarios autenticar(String cpf, String senha){
-        return  getEntityManager()
-                .createQuery("SELECT u FROM Funcionarios u Where u.cpf = :cpf AND u.senha = :senha", Funcionarios.class)
-                .setParameter("cpf", cpf)
-                .setParameter("senha", senha)
+    public Funcionarios GetByCpf(String cpf){
+        return getEntityManager()
+                .createQuery("SELECT u FROM Funcionarios u Where u.cpf = "+cpf, Funcionarios.class)
                 .getSingleResult();
     }
 }

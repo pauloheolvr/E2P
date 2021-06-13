@@ -6,7 +6,6 @@
 package Entities;
 
 import java.io.Serializable;
-import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,7 +14,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -23,13 +21,14 @@ import javax.persistence.Table;
  * @author Dell
  */
 @Entity
-@Table(name = "produtos")
+@Table(name = "produtos", catalog = "e2psystem", schema = "")
 @NamedQueries({
     @NamedQuery(name = "Produtos.findAll", query = "SELECT p FROM Produtos p"),
     @NamedQuery(name = "Produtos.findById", query = "SELECT p FROM Produtos p WHERE p.id = :id"),
     @NamedQuery(name = "Produtos.findByNome", query = "SELECT p FROM Produtos p WHERE p.nome = :nome"),
     @NamedQuery(name = "Produtos.findByTamanho", query = "SELECT p FROM Produtos p WHERE p.tamanho = :tamanho"),
     @NamedQuery(name = "Produtos.findByValor", query = "SELECT p FROM Produtos p WHERE p.valor = :valor"),
+    @NamedQuery(name = "Produtos.findByValorTotal", query = "SELECT p FROM Produtos p WHERE p.valorTotal = :valorTotal"),
     @NamedQuery(name = "Produtos.findByQuantidadeEstoque", query = "SELECT p FROM Produtos p WHERE p.quantidadeEstoque = :quantidadeEstoque")})
 public class Produtos implements Serializable {
 
@@ -45,10 +44,10 @@ public class Produtos implements Serializable {
     private String tamanho;
     @Column(name = "Valor")
     private Integer valor;
+    @Column(name = "ValorTotal")
+    private Integer valorTotal;
     @Column(name = "QuantidadeEstoque")
     private Integer quantidadeEstoque;
-    @OneToMany(mappedBy = "produtoid")
-    private Collection<Carrinho_1> carrinhoCollection;
 
     public Produtos() {
     }
@@ -89,20 +88,20 @@ public class Produtos implements Serializable {
         this.valor = valor;
     }
 
+    public Integer getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(Integer valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+
     public Integer getQuantidadeEstoque() {
         return quantidadeEstoque;
     }
 
     public void setQuantidadeEstoque(Integer quantidadeEstoque) {
         this.quantidadeEstoque = quantidadeEstoque;
-    }
-
-    public Collection<Carrinho_1> getCarrinhoCollection() {
-        return carrinhoCollection;
-    }
-
-    public void setCarrinhoCollection(Collection<Carrinho_1> carrinhoCollection) {
-        this.carrinhoCollection = carrinhoCollection;
     }
 
     @Override

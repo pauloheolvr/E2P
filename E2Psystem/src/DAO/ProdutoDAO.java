@@ -1,16 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package DAO;
+import javax.persistence.EntityManager;
 
 import Entities.Produtos;
-
-/**
- *
- * @author Dell
- */
 public class ProdutoDAO extends GenericDAO<Produtos>{
+     public void excluir(int id){
+        Produtos produto = super.selecionarPorCodigo(id);
+        super.excluir(produto);
+    }
+     public void atualizarEstoque(int quantidade, int Id){
+         getEntityManager()
+                 .createQuery("UPDATE Produtos u SET u.quantidadeEstoque = u.quantidadeEstoque - :quantidade WHERE u.id = :id")
+                 .setParameter("quantidade", quantidade)
+                 .setParameter("id", Id);
+     }
+     public int deletarTodosCarrinho(){
+         return getEntityManager()
+                 .createQuery("DELETE FROM Carrinho")
+                 .executeUpdate();
+     }
+     
     
 }
